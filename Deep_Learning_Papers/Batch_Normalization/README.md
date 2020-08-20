@@ -1,0 +1,1 @@
+[정리](https://www.notion.so/bluecandle/Batch-Normalization-a7325c31ce7844c5b69207c8adbe5ebb)
