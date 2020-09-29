@@ -6,8 +6,7 @@
 
 ---
 
-[[DeepFashion2] A Versatile Benchmark for Detection, Pose Estimation,
-Segmentation and Re-Identification of Clothing Images.pdf](images/DeepFashion2_A_Versatile_Benchmark_for_Detection_Pose_Estimation_Segmentation_and_Re-Identification_of_Clothing_Images.pdf)
+https://arxiv.org/abs/1901.07973
 
 ### 이 논문의 한 줄
 

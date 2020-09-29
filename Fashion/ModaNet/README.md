@@ -5,6 +5,7 @@
 ### 논문
 
 ---
+https://arxiv.org/abs/1807.01394
 
 [ModaNet: A Large-scale Street Fashion Dataset with Polygon_1807.01394.pdf](images/ModaNet_A_Large-scale_Street_Fashion_Dataset_with_Polygon_1807.01394.pdf)
 
