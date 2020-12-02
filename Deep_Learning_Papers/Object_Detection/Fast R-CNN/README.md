@@ -73,7 +73,7 @@ region proposal 을 CNN Level 로 통과시킨다. (전체 이미지에 대한 f
     - **`M X N`** 형태의 행렬 **`A`**을 다음과 같은 형태로 분해하여 나타내는 것입니다.
     - $A = UΣV^{T}$
 
-        ![Fimages/Untitled.png](Fimages/Untitled.png)
+        ![images/Untitled.png](images/Untitled.png)
 
     SVD는 "**정보 복원**"을 위해 사용된다.
     특이값 분해는 분해되는 과정보다는 분해된 행렬을 다시 조합하는 과정에서 그 응용력이 빛을 발한다.
@@ -95,7 +95,7 @@ region proposal 을 CNN Level 로 통과시킨다. (전체 이미지에 대한 f
     - 1개의 피라미드 SPP(Spatial Pyramid Network)로 고정된 크기의 feature vector를 만드는 과정으로도 설명할 수 있다! (논문에서  피라미드 사이즈는 7x7)
     - [https://ganghee-lee.tistory.com/36](https://ganghee-lee.tistory.com/36)
 
-    ![Fimages/Untitled%201.png](Fimages/Untitled%201.png)
+    ![images/Untitled%201.png](images/Untitled%201.png)
 
     - Fast R-CNN에서 먼저 입력 이미지를 CNN에 통과시켜 feature map을 추출한다.
     - 그 후 이전에 미리 Selective search로 만들어놨던 RoI(=region proposal)을 feature map에 projection시킨다.
@@ -127,7 +127,7 @@ region proposal 을 CNN Level 로 통과시킨다. (전체 이미지에 대한 f
     - R-CNN is slow because it performs a ConvNet forward-pass for each object proposal, without sharing computation
 - We propose a new training algorithm that fixes the disadvantages of R-CNN and SPPnet, while improving on their speed and accuracy
 
-![Fimages/Untitled%202.png](Fimages/Untitled%202.png)
+![images/Untitled%202.png](images/Untitled%202.png)
 
 - processes the whole image with several convolutional (conv) and max pooling layers to produce a conv feature map
 - for each object proposal a region of interest (RoI) pooling layer ex- tracts a fixed-length feature vector from the feature map
@@ -141,7 +141,7 @@ region proposal 을 CNN Level 로 통과시킨다. (전체 이미지에 대한 f
     - Iverson bracket indicator function [u ≥ 1] evaluates to 1 when u ≥ 1 and 0 otherwise.
 - loss for Bbox regression ⇒ outlier 에 대해 더 robust한 $L_1$ loss 임을 알 수 있다.
 
-    ![Fimages/Untitled%203.png](Fimages/Untitled%203.png)
+    ![images/Untitled%203.png](images/Untitled%203.png)
 
 - **When the regression targets are unbounded, training with L2 loss can require careful tuning of learning rates in order to prevent exploding gradients. Eq. 3 eliminates this sensitivity**
     - 오호... 하긴 회귀문제에서 $L_2$ loss 잘못쓰면 제곱하면서 엄청 커져버릴 수 있겠구나!
@@ -161,9 +161,9 @@ region proposal 을 CNN Level 로 통과시킨다. (전체 이미지에 대한 f
 
 ---
 
-![Fimages/Untitled%204.png](Fimages/Untitled%204.png)
+![images/Untitled%204.png](images/Untitled%204.png)
 
-![Fimages/Untitled%205.png](Fimages/Untitled%205.png)
+![images/Untitled%205.png](images/Untitled%205.png)
 
 ### 기타
 
