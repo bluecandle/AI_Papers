@@ -1,5 +1,7 @@
 # CenterNet: Objects as Points
 
+https://www.notion.so/CenterNet-Objects-as-Points-dfa6be07af9d470a9806e39b546c4c51
+
 Date: Dec 3, 2020 → Dec 5, 2020
 Property: DL, Object_Detection
 Status: 1회독완료
@@ -32,7 +34,7 @@ Status: 1회독완료
 
     ⇒ A center point can be seen as a single shape-agnostic anchor
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled.png)
+    ![images/Untitled.png](images/Untitled.png)
 
     [https://nuggy875.tistory.com/34](https://nuggy875.tistory.com/34)
 
@@ -54,7 +56,7 @@ Status: 1회독완료
     - Heatmap 예측
     - CornerNet과 동일한 네트워크를 사용하여 Keypoint Prediction을 진행
 
-![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%201.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%201.png)
+![images/Untitled%201.png](images/Untitled%201.png)
 
 [https://nuggy875.tistory.com/34](https://nuggy875.tistory.com/34)
 
@@ -72,7 +74,7 @@ Status: 1회독완료
 
     예를 들어 batch size 가 64 라고 하면, 64 개의 sample 을 본 후, loss 를 계산해서 backpropagation 을 통해 weight 를 업데이트 하게 되는데 이 때, **이 loss 의 계산에 현재까지의 클래스 별 정확도를 고려한 weight 를 줌으로서 전반적인 모델의 정확도를 높이고자 하는 것**이다.
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%202.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%202.png)
+    ![images/Untitled%202.png](images/Untitled%202.png)
 
     Focal loss 는 어떤 batch 의 트레이닝 데이터에 같은 weight 를 주지 않고, **분류 성능이 높은 클래스에 대해서는 down-weighting 을 한다. 이 때**, $\gamma$ (gamma) 를 주어, 이 down-weighting 의 정도를 결정한다. **분류가 힘든 데이터에 대한 트레이닝을 강조하는 효과**.
 
@@ -87,14 +89,14 @@ Status: 1회독완료
     - All outputs share a common fully-convolutional backbone Network!
 - CenterNet은 우선 heatmap으로부터 각 Category마다 peaks들을 뽑아 냅니다.
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%203.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%203.png)
+    ![images/Untitled%203.png](images/Untitled%203.png)
 
     [https://nuggy875.tistory.com/34](https://nuggy875.tistory.com/34)
 
     - heatmap 에서 주변 8개 pixel보다 값이 크거나 같은 중간값들을 모두 저장하고, 값이 큰 100개의 peak들을 남겨놓습니다.
     - 뽑아낸 **peaks** (keypoints) 의 위치는 정수 형태인 (x, y)로 나타내어지고,이를 통해 **bounding box의 좌표**를 아래와 같이 나타낼 수 있습니다.
 
-        ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%204.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%204.png)
+        ![images/Untitled%204.png](images/Untitled%204.png)
 
         [https://nuggy875.tistory.com/34](https://nuggy875.tistory.com/34)
 
@@ -120,20 +122,20 @@ Status: 1회독완료
 - ***Training Time***
 - ***[keypoint prediction network]:*** The training objective is a penalty-reduced pixelwise logistic regression with **focal loss**
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%205.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%205.png)
+    ![images/Untitled%205.png](images/Untitled%205.png)
 
 - ***[offset prediction network]***: To recover the discretization error caused by the output stride, we additionally predict a local offset.
     - **L1 Loss**
 
-        ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%206.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%206.png)
+        ![images/Untitled%206.png](images/Untitled%206.png)
 
 - ***[object size] : L1 loss***
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%207.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%207.png)
+    ![images/Untitled%207.png](images/Untitled%207.png)
 
 - ***[overall]***
 
-    ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%208.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%208.png)
+    ![images/Untitled%208.png](images/Untitled%208.png)
 
 - ***Inference time***
     - extract the peaks in the heatmap for each category independently
@@ -141,7 +143,7 @@ Status: 1회독완료
     - $\hat{P_c}$ : class c 에 대해 detect 된 n 개의 center point set
     - use the keypoint values ${\hat Y_{{x_i}{y_i}c}}$ as a measure of its detection confidence, and produce a bounding box
 
-        ![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%209.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%209.png)
+        ![images/Untitled%209.png](images/Untitled%209.png)
 
     - $(\delta\hat x_i,\delta\hat y_i) = \hat O_{\hat x_i, \hat y_i}$ : offset prediction
     - $(\hat w_i, \hat h_i) : \hat S_{\hat x_i, \hat y_i}$ : size prediction
@@ -164,7 +166,7 @@ Status: 1회독완료
 
 ---
 
-![CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%2010.png](CenterNet%20Objects%20as%20Points%20a6e25aef1843425e918c9e7b2c382d77/Untitled%2010.png)
+![images/Untitled%2010.png](images/Untitled%2010.png)
 
 [https://nuggy875.tistory.com/34](https://nuggy875.tistory.com/34)
 
