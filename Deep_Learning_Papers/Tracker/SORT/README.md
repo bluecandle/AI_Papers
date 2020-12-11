@@ -2,7 +2,7 @@
 
 Date: Dec 10, 2020
 Property: DL, Tracker
-Status: 1획독완료
+Status: 1회독완료
 
 [정리원본](https://www.notion.so/SORT-cde9cc89508c4ce48a3efeb99f36563f)
 
