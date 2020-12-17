@@ -77,7 +77,7 @@ our goal is to find a transformation f that can effectively aggregate different 
 
 The conventional FPN aggregates multi-scale features in a top-down manner:
 
-![EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled.png](EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled.png)
+![images/Untitled.png](images/Untitled.png)
 
 where Resize is usually an upsampling or downsampling op for resolution matching, and Conv is usually a convolutional op for feature processing.
 
@@ -145,7 +145,7 @@ Our final BiFPN integrates both the bidirectional cross-scale connections and th
 
 [예시]
 
-![EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%201.png](EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%201.png)
+![images/Untitled%201.png](images/Untitled%201.png)
 
 Notably, to further improve the efficiency, we use depthwise separable convolution for feature fusion and add batch normalization and activation after each convolution.
 
@@ -155,7 +155,7 @@ Notably, to further improve the efficiency, we use depthwise separable convoluti
 
 we will discuss the network architecture and a new compound scaling method for EfficientDet.
 
-![EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%202.png](EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%202.png)
+![images/Untitled%202.png](images/Untitled%202.png)
 
 We employ ImageNet pre-trained EfficientNets as the backbone network.
 
@@ -163,7 +163,7 @@ Our proposed BiFPN serves as the feature network, which takes level 3-7 features
 
 the class and box network weights are shared across all levels of features
 
-![EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%203.png](EfficientDet%20Scalable%20and%20Efficient%20Object%20Detecti%2001c6aabcc7404e4c9f8829f2cebc8b9c/Untitled%203.png)
+![images/Untitled%203.png](images/Untitled%203.png)
 
 **Compound Scaling**
 
