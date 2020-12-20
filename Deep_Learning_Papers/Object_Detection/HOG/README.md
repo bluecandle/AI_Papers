@@ -1,0 +1,1 @@
+[정리](https://www.notion.so/HOG_Histogram-of-Oriented-Gradients-8050212f6856487b96e16b1be49d0321)
