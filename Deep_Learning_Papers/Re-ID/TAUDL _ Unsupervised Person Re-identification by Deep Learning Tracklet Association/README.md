@@ -9,6 +9,8 @@ Status: 1회독완료
 (1) Per-Camera Tracklet Discrimination (PCTD) Learning
 (2) Cross-Camera Tracklet Association (CCTA) Learning
 
+[notion link](https://www.notion.so/bluecandle/TAUDL-_-Unsupervised-Person-Re-identification-by-Deep-Learning-Tracklet-Association-973b3751311248339d6853c9edd238bf)
+
 ### 논문
 
 ---
